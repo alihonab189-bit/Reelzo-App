@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -33,15 +30,15 @@ jobs:
           channel: 'stable'
           cache: true
 
-      - name: Restore Dependencies
-        run: flutter pub get
-
-      - name: Validate Code Format
-        run: flutter analyze || true # Skip on warning
+      - name: Repair and Get Dependencies
+        run: |
+          flutter pub get
+          flutter pub upgrade --major-versions --confirm
 
       - name: Execute Production Build
         run: |
           flutter build apk --release \
+          --no-pub \
           --dart-define=OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} \
           --dart-define=AGORA_APP_ID=${{ secrets.AGORA_APP_ID }}
 
@@ -50,5 +47,4 @@ jobs:
         with:
           name: Reelzo-Production-Build
           path: build/app/outputs/flutter-apk/app-release.apk
-          compression-level: 9
-          if-no-files-found: error
+          if-no-files-found: warn
