@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "682905339476",
+    "firebase_url": "https://reelzo-da371-default-rtdb.firebaseio.com",
+    "project_id": "reelzo-da371",
+    "storage_bucket": "reelzo-da371.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682905339476:android:68fd12a78190ac6c5e4fc1",
+        "android_client_info": {
+          "package_name": "reelzo.honab.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682905339476-9tjo5h1uflpcaih3ukn9r5d508ivr1ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtmEA5_SeOHmF0yYsxO8em3vPjdZkmS0g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682905339476-9tjo5h1uflpcaih3ukn9r5d508ivr1ba.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "682905339476-kvjelruauff5iep6d7sc0d82l95h1cmu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "reelzo.honab.com"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
